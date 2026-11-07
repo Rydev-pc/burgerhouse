@@ -25,6 +25,14 @@ class LoyaltyViewModel(
     companion object {
         /** Pontos necessários para ganhar um hambúrguer grátis. */
         const val POINTS_PER_REWARD = 10
+
+        val Factory: ViewModelProvider.Factory = viewModelFactory {
+            initializer {
+                val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]
+                    as BurgerHouseApp
+                LoyaltyViewModel(app.repository)
+            }
+        }
     }
 
     /** Estado consolidado da tela de fidelidade. */
@@ -48,16 +56,6 @@ class LoyaltyViewModel(
     /** Dados do usuário (nome exibido no cartão de pontos). */
     val user: StateFlow<User?> = repository.getUser()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
-
-    companion object {
-        val Factory: ViewModelProvider.Factory = viewModelFactory {
-            initializer {
-                val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]
-                    as BurgerHouseApp
-                LoyaltyViewModel(app.repository)
-            }
-        }
-    }
 }
 
 /** Estado da UI de fidelidade. */
