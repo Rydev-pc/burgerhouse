@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import com.burgerhouse.app.data.repository.seedDatabaseIfEmpty
 import com.burgerhouse.app.ui.navigation.AppNavigation
 import com.burgerhouse.app.ui.theme.BurgerHouseTheme

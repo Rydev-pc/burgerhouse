@@ -31,13 +31,6 @@ class CheckoutViewModel(
     private val repository: BurgerRepository
 ) : ViewModel() {
 
-    companion object {
-        const val DELIVERY_FEE = 8.0
-
-        /** A cada R$ 50,00 em compras o cliente ganha 1 ponto. */
-        const val POINTS_PER_AMOUNT = 50.0
-    }
-
     private val _appliedCoupon = MutableStateFlow<Coupon?>(null)
     val appliedCoupon: StateFlow<Coupon?> = _appliedCoupon
 
@@ -206,6 +199,11 @@ class CheckoutViewModel(
     }
 
     companion object {
+        const val DELIVERY_FEE = 8.0
+
+        /** A cada R$ 50,00 em compras o cliente ganha 1 ponto. */
+        const val POINTS_PER_AMOUNT = 50.0
+
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
                 val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]

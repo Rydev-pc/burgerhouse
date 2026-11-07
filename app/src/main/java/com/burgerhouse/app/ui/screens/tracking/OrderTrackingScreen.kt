@@ -49,7 +49,7 @@ import java.util.Locale
  * Acompanhamento do pedido: número, tempo estimado, itens, total e
  * timeline animada com atualização automática a cada 15 segundos.
  */
-@androidx.compose.material3.ExperimentalMaterial3Api
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun OrderTrackingScreen(
     orderId: Long,

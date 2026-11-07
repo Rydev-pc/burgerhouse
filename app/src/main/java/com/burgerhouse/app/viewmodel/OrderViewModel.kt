@@ -30,11 +30,6 @@ class OrderViewModel(
     private val repository: BurgerRepository
 ) : ViewModel() {
 
-    companion object {
-        /** Intervalo (ms) de atualização automática de status. */
-        const val STATUS_UPDATE_INTERVAL = 15_000L
-    }
-
     /** Lista de pedidos (com itens) do histórico. */
     val orders: StateFlow<List<OrderWithItems>> = repository.getOrdersWithItems()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
@@ -104,6 +99,9 @@ class OrderViewModel(
     }
 
     companion object {
+        /** Intervalo (ms) de atualização automática de status. */
+        const val STATUS_UPDATE_INTERVAL = 15_000L
+
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
                 val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]

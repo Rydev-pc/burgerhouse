@@ -27,11 +27,6 @@ class CartViewModel(
     private val repository: BurgerRepository
 ) : ViewModel() {
 
-    companion object {
-        /** Taxa de entrega fixa do app. */
-        const val DELIVERY_FEE = 8.0
-    }
-
     private val _appliedCoupon = MutableStateFlow<Coupon?>(null)
     val appliedCoupon: StateFlow<Coupon?> = _appliedCoupon
 
@@ -121,6 +116,9 @@ class CartViewModel(
     suspend fun currentItems(): List<CartItem> = repository.getCartItems().first()
 
     companion object {
+        /** Taxa de entrega fixa do app. */
+        const val DELIVERY_FEE = 8.0
+
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
                 val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]
