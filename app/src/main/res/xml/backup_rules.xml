@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <!-- Backup em nuvem: ignora o banco local (regenerado pelo seed) -->
+    <exclude domain="database" path="burger_house.db" />
+</rules>

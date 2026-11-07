@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Ícone de hambúrguer desenhado em vetor (usado como foreground do launcher) -->
+    <!-- Pão superior -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M30,46 C30,36.72 38.72,29 49,29 H59 C69.28,29 78,36.72 78,46 Z" />
+    <!-- Gergelim -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,37 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,35 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,38 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,42 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <!-- Alface -->
+    <path
+        android:fillColor="#7CB342"
+        android:pathData="M28,48 H80 a0,0 0 0,0 1 0,0 v3 H28 Z" />
+    <!-- Queijo -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M29,52 L79,52 L76,58 L32,58 Z" />
+    <!-- Carne -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M30,58 H78 v6 H30 Z" />
+    <!-- Pão inferior -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M30,64 H78 v5 c0,4.42 -3.58,8 -8,8 H38 c-4.42,0 -8,-3.58 -8,-8 Z" />
+</vector>

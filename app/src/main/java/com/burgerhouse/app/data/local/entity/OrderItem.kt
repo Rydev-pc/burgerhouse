@@ -1,0 +1,36 @@
+package com.burgerhouse.app.data.local.entity
+
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Index
+import androidx.room.PrimaryKey
+
+/**
+ * Item de um pedido. Relacionado a [Order] por chave estrangeira:
+ * ao excluir um pedido, seus itens são removidos em cascata.
+ */
+@Entity(
+    tableName = "order_items",
+    foreignKeys = [
+        ForeignKey(
+            entity = Order::class,
+            parentColumns = ["id"],
+            childColumns = ["orderId"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ],
+    indices = [Index("orderId")]
+)
+data class OrderItem(
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
+    val orderId: Long,
+    val productId: Long,
+    val name: String,
+    val quantity: Int,
+    val unitPrice: Double,
+    val extrasPrice: Double,
+    val notes: String
+) {
+    val totalPrice: Double get() = (unitPrice + extrasPrice) * quantity
+}

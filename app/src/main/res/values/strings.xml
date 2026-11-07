@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Burger House</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Cardápio artesanal</string>
+    <string name="onboarding_desc_1">Dezenas de hambúrgueres, combos, acompanhamentos, bebidas e sobremesas feitos com ingredientes selecionados.</string>
+    <string name="onboarding_title_2">Delivery rápido</string>
+    <string name="onboarding_desc_2">Acompanhe seu pedido em tempo real, do preparo até a entrega na sua porta.</string>
+    <string name="onboarding_title_3">Programa de fidelidade</string>
+    <string name="onboarding_desc_3">Cada pedido gera pontos. Junte 10 pontos e ganhe um hambúrguer grátis.</string>
+    <string name="onboarding_skip">Pular</string>
+    <string name="onboarding_next">Avançar</string>
+    <string name="onboarding_start">Começar</string>
+
+    <!-- Login -->
+    <string name="login_title">Bem-vindo ao Burger House</string>
+    <string name="login_subtitle">Crie sua conta ou entre para continuar</string>
+    <string name="login_name">Nome completo</string>
+    <string name="login_email">E-mail</string>
+    <string name="login_phone">Telefone</string>
+    <string name="login_address">Endereço de entrega</string>
+    <string name="login_action">Entrar e continuar</string>
+
+    <!-- Home -->
+    <string name="home_promo_title">Promoção do dia</string>
+    <string name="home_search">Buscar no cardápio&#8230;</string>
+
+    <!-- Carrinho -->
+    <string name="cart_title">Carrinho</string>
+    <string name="cart_empty">Seu carrinho está vazio</string>
+    <string name="cart_checkout">Finalizar pedido</string>
+    <string name="cart_coupon">Cupom de desconto</string>
+    <string name="cart_apply">Aplicar</string>
+
+    <!-- Perfil -->
+    <string name="profile_logout">Sair da conta</string>
+    <string name="profile_about">Sobre o app</string>
+</resources>

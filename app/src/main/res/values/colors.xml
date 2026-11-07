@@ -1,0 +1,7 @@
+<resources>
+    <color name="burger_primary">#FF6B35</color>
+    <color name="burger_secondary">#2D2D2D</color>
+    <color name="burger_background">#FFF8F0</color>
+    <color name="burger_black">#FF000000</color>
+    <color name="burger_white">#FFFFFFFF</color>
+</resources>
