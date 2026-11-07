@@ -4,6 +4,9 @@ Aplicativo Android completo para uma hamburgueria fictícia. Projeto funcional, 
 persistência local (Room), UI moderna em Jetpack Compose (Material Design 3) e
 arquitetura MVVM. Nenhum backend necessário: todos os dados são locais no dispositivo.
 
+> **Nota:** este projeto é apenas um teste/portfólio. Fique à vontade para usá-lo
+> como modelo ou ponto de partida para os seus próprios apps.
+
 ## Stack técnica
 
 | Tecnologia | Uso |
