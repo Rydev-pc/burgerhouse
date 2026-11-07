@@ -48,6 +48,16 @@ class LoyaltyViewModel(
     /** Dados do usuário (nome exibido no cartão de pontos). */
     val user: StateFlow<User?> = repository.getUser()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+
+    companion object {
+        val Factory: ViewModelProvider.Factory = viewModelFactory {
+            initializer {
+                val app = this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]
+                    as BurgerHouseApp
+                LoyaltyViewModel(app.repository)
+            }
+        }
+    }
 }
 
 /** Estado da UI de fidelidade. */
